@@ -9,7 +9,11 @@ client.on('qr', (qr) => {
 });
 
 client.on('ready', () => {
-    console.log('Client is ready!');
+    console.log('O Cliente está pronto');
+});
+
+client.on("disconnected", reason => {
+  console.log('O Cliente foi desconectado !');
 });
 
 client.on('message', msg => {
