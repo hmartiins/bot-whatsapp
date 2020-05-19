@@ -2,7 +2,7 @@ const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
 const WhoAreYou = require('./controllers/index.js');
-const a = require('./controllers/index.js');
+const One = require('./controllers/one.js');
 
 const client = new Client();
 
@@ -22,6 +22,9 @@ client.on('message', msg => {
   switch(msg.body){
     case '!teste':
       WhoAreYou(msg);
+      break;
+    case '.1':
+      One(msg);
       break;
   }
 });
