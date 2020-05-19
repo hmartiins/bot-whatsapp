@@ -1,15 +1,17 @@
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
+const WhoAreYou = require('./controllers/index.js');
+const a = require('./controllers/index.js');
+
 const client = new Client();
 
 client.on('qr', (qr) => {
-    // Generate and scan this code with your phone
-    qrcode.generate(qr, {small: true});
+  qrcode.generate(qr, {small: true});
 });
 
 client.on('ready', () => {
-    console.log('O Cliente está pronto');
+  console.log('O Cliente está pronto');
 });
 
 client.on("disconnected", reason => {
@@ -17,9 +19,11 @@ client.on("disconnected", reason => {
 });
 
 client.on('message', msg => {
-    if (msg.body == '!ping') {
-        msg.reply('pong');
-    }
+  switch(msg.body){
+    case '!teste':
+      WhoAreYou(msg);
+      break;
+  }
 });
 
 client.initialize();
