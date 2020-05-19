@@ -1,8 +1,8 @@
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
-const WhoAreYou = require('./controllers/index.js');
-const One = require('./controllers/one.js');
+const { WhoAreYou, One } = require('./controllers/index.js');
+// const One = require('./controllers/one.js');
 
 const client = new Client();
 
