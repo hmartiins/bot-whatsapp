@@ -19,7 +19,7 @@ function AnswerTwo(msg){
   msg.reply(answer2);
 }
 function AnswerThree(msg){
-  msg.reply(text4);  
+  msg.reply(answer3);  
 }
 module.exports = {
   Test,
