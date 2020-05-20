@@ -10,16 +10,28 @@ const {
 
 const client = new Client();
 
-client.on('qr', (qr) => {
-  qrcode.generate(qr, {small: true});
-});
+try {
+  client.on('qr', (qr) => {
+    qrcode.generate(qr, {small: true});
+  });
+} catch (err) {
+  console.log(err);
+  console.log('\n\nTivemos um ao exibir o QrCode, tente reabrir o programa ');
+  console.log('Caso o erro persista, comente ele em uma Issue no repositório do Github');
+}
 
-client.on('ready', () => {
-  console.log('O Cliente está pronto');
-});
+try {
+  client.on('ready', () => {
+    console.log('O Cliente foi conectado');
+  });
+} catch (err) {
+  console.log(err);
+  console.log('\n\nTivemos um erro para se conectar, tente reabrir o programa ');
+  console.log('Caso o erro persista, comente ele em uma Issue no repositório do Github');
+}
 
-client.on('disconnected', reason => {
-  console.log('O Cliente foi desconectado !');
+client.on('disconnected', () => {
+  console.log('\n\nO Cliente foi desconectado !');
 });
 
 client.on('message', msg => {
