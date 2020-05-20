@@ -1,8 +1,9 @@
 const { 
   test, 
   text1, 
-  text2,
-  text3 
+  answer1,
+  answer2,
+  answer3 
 } = require('./texts/index.js');
 
 function Test(msg){
@@ -12,14 +13,18 @@ function WhoAreYou(msg){
   msg.reply(text1);
 }
 function AnswerOne(msg){
-  msg.reply(text2);
+  msg.reply(answer1);
 }
 function AnswerTwo(msg){
-  msg.reply(text3);
+  msg.reply(answer2);
+}
+function AnswerThree(msg){
+  msg.reply(text4);  
 }
 module.exports = {
   Test,
   WhoAreYou,
   AnswerOne,
   AnswerTwo,
+  AnswerThree
 }

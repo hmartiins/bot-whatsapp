@@ -13,7 +13,7 @@ client.on('ready', () => {
   console.log('O Cliente está pronto');
 });
 
-client.on("disconnected", reason => {
+client.on('disconnected', reason => {
   console.log('O Cliente foi desconectado !');
 });
 

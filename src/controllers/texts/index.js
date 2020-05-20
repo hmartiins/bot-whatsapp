@@ -9,12 +9,12 @@ basta digitar tudo que esteja dentro dos [ ] !
   [.3] * Contato e redes sociais
   [.4] * Contato e redes sociais ?
 `);
-const text2 = (`Bom vamos lá, a primeira versão desse bot não tem 
+const answer1 = (`Bom vamos lá, a primeira versão desse bot não tem 
 nenhuma interface gráfica nem nada, apenas o terminal, então estou utilizando 
 apenas Node.JS, e para capturar e enviar as mensagens, uma lib bem bacana do 
 whatsapp para o Node.
 `);
-const text3 = (`Hm, do lado do servidor estou estudando C#, JavaScript, NodeJS, 
+const answer2 = (`Hm, do lado do servidor estou estudando C#, JavaScript, NodeJS, 
 para web além do HTML5/CSS3 básico estou vendo React, e para mobile estou 
 estuando Apache Cordova, e React-Native. Mais pra frente eu pretendo me aprofundar
 em TypeScript e ver Dart para desenvolver em Flutter, pois acho que as animações
@@ -24,6 +24,6 @@ const test = ('pong');
 module.exports = {
   test,
   text1,
-  text2,
-  text3
+  answer1,
+  answer2, 
 }
