@@ -1,8 +1,7 @@
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
-const { WhoAreYou, One } = require('./controllers/index.js');
-// const One = require('./controllers/one.js');
+const { WhoAreYou, One, Test } = require('./controllers/index.js');
 
 const client = new Client();
 
@@ -20,6 +19,9 @@ client.on("disconnected", reason => {
 
 client.on('message', msg => {
   switch(msg.body){
+    case '!ping':
+      Test(msg);
+      break;
     case '!teste':
       WhoAreYou(msg);
       break;
