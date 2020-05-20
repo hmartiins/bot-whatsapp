@@ -14,9 +14,16 @@ nenhuma interface gráfica nem nada, apenas o terminal, então estou utilizando
 apenas Node.JS, e para capturar e enviar as mensagens, uma lib bem bacana do 
 whatsapp para o Node.
 `);
+const text3 = (`Hm, do lado do servidor estou estudando C#, JavaScript, NodeJS, 
+para web além do HTML5/CSS3 básico estou vendo React, e para mobile estou 
+estuando Apache Cordova, e React-Native. Mais pra frente eu pretendo me aprofundar
+em TypeScript e ver Dart para desenvolver em Flutter, pois acho que as animações
+nativas do Flutter são renderizadas de melhor forma do que as dos React-Native.        
+`);
 const test = ('pong');
 module.exports = {
   test,
   text1,
-  text2
+  text2,
+  text3
 }
